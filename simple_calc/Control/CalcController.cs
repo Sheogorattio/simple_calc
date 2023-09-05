@@ -9,7 +9,7 @@ using simple_calc.Model;
 
 namespace simple_calc.Control
 {
-    //Этот класс должен парсить итоговую строку, которая передаётся в конструктор, выделить два операнда и один опрератор (или один операнд в случае корня, инверсии числа).
+    //Этот класс должен парсить итоговую строку, которая передаётся в конструктор, выделить два операнда и один опрератор (или один операнд в случае корня).
     //После этого для вычисления результата будут вызываться методы из композированного объекта калькулятора.
     //В конце строка выражения дополняется результатом вычислений и возвращается в TextBox в необходимом формате.
     public class CalcController 
@@ -17,10 +17,18 @@ namespace simple_calc.Control
         Calc calc;
         Expression expr;
         string expression;
-        public CalcController(string expression) 
+        public void SetExpression(string expression)
+        {
+            this.expression = expression;
+        }
+
+        public CalcController()
         {
             calc = new Calc();
             expr = new Expression();
+        }
+        public CalcController(string expression) : base()
+        { 
             this.expression = expression;
         }
 

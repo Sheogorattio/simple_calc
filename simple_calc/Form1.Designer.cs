@@ -44,7 +44,6 @@
             this.plusButton = new System.Windows.Forms.Button();
             this.minusButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
-            this.clearEntryButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             this.percentButton = new System.Windows.Forms.Button();
             this.rootButton = new System.Windows.Forms.Button();
@@ -63,6 +62,7 @@
             this.sevenButton.TabIndex = 0;
             this.sevenButton.Text = "7";
             this.sevenButton.UseVisualStyleBackColor = true;
+            this.sevenButton.Click += new System.EventHandler(this.generalButton_click);
             // 
             // eightButton
             // 
@@ -73,6 +73,7 @@
             this.eightButton.TabIndex = 0;
             this.eightButton.Text = "8";
             this.eightButton.UseVisualStyleBackColor = true;
+            this.eightButton.Click += new System.EventHandler(this.generalButton_click);
             // 
             // nineButton
             // 
@@ -83,6 +84,7 @@
             this.nineButton.TabIndex = 0;
             this.nineButton.Text = "9";
             this.nineButton.UseVisualStyleBackColor = true;
+            this.nineButton.Click += new System.EventHandler(this.generalButton_click);
             // 
             // fourButton
             // 
@@ -93,6 +95,7 @@
             this.fourButton.TabIndex = 0;
             this.fourButton.Text = "4";
             this.fourButton.UseVisualStyleBackColor = true;
+            this.fourButton.Click += new System.EventHandler(this.generalButton_click);
             // 
             // fiveButton
             // 
@@ -103,6 +106,7 @@
             this.fiveButton.TabIndex = 0;
             this.fiveButton.Text = "5";
             this.fiveButton.UseVisualStyleBackColor = true;
+            this.fiveButton.Click += new System.EventHandler(this.generalButton_click);
             // 
             // sixButton
             // 
@@ -113,6 +117,7 @@
             this.sixButton.TabIndex = 0;
             this.sixButton.Text = "6";
             this.sixButton.UseVisualStyleBackColor = true;
+            this.sixButton.Click += new System.EventHandler(this.generalButton_click);
             // 
             // oneButton
             // 
@@ -123,6 +128,7 @@
             this.oneButton.TabIndex = 0;
             this.oneButton.Text = "1";
             this.oneButton.UseVisualStyleBackColor = true;
+            this.oneButton.Click += new System.EventHandler(this.generalButton_click);
             // 
             // twoButton
             // 
@@ -133,6 +139,7 @@
             this.twoButton.TabIndex = 0;
             this.twoButton.Text = "2";
             this.twoButton.UseVisualStyleBackColor = true;
+            this.twoButton.Click += new System.EventHandler(this.generalButton_click);
             // 
             // threeButton
             // 
@@ -143,6 +150,7 @@
             this.threeButton.TabIndex = 0;
             this.threeButton.Text = "3";
             this.threeButton.UseVisualStyleBackColor = true;
+            this.threeButton.Click += new System.EventHandler(this.generalButton_click);
             // 
             // zeroButton
             // 
@@ -153,6 +161,7 @@
             this.zeroButton.TabIndex = 0;
             this.zeroButton.Text = "0";
             this.zeroButton.UseVisualStyleBackColor = true;
+            this.zeroButton.Click += new System.EventHandler(this.generalButton_click);
             // 
             // dotButton
             // 
@@ -163,6 +172,7 @@
             this.dotButton.TabIndex = 0;
             this.dotButton.Text = ",";
             this.dotButton.UseVisualStyleBackColor = true;
+            this.dotButton.Click += new System.EventHandler(this.generalButton_click);
             // 
             // divisionButton
             // 
@@ -173,6 +183,7 @@
             this.divisionButton.TabIndex = 0;
             this.divisionButton.Text = "/";
             this.divisionButton.UseVisualStyleBackColor = true;
+            this.divisionButton.Click += new System.EventHandler(this.generalButton_click);
             // 
             // multButton
             // 
@@ -183,6 +194,7 @@
             this.multButton.TabIndex = 0;
             this.multButton.Text = "*";
             this.multButton.UseVisualStyleBackColor = true;
+            this.multButton.Click += new System.EventHandler(this.generalButton_click);
             // 
             // plusButton
             // 
@@ -193,6 +205,7 @@
             this.plusButton.TabIndex = 0;
             this.plusButton.Text = "+";
             this.plusButton.UseVisualStyleBackColor = true;
+            this.plusButton.Click += new System.EventHandler(this.generalButton_click);
             // 
             // minusButton
             // 
@@ -203,36 +216,29 @@
             this.minusButton.TabIndex = 0;
             this.minusButton.Text = "-";
             this.minusButton.UseVisualStyleBackColor = true;
+            this.minusButton.Click += new System.EventHandler(this.generalButton_click);
             // 
             // deleteButton
             // 
             this.deleteButton.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton.Location = new System.Drawing.Point(12, 139);
+            this.deleteButton.Location = new System.Drawing.Point(188, 139);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(53, 40);
+            this.deleteButton.Size = new System.Drawing.Size(112, 40);
             this.deleteButton.TabIndex = 0;
             this.deleteButton.Text = "⌫";
             this.deleteButton.UseVisualStyleBackColor = true;
-            // 
-            // clearEntryButton
-            // 
-            this.clearEntryButton.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearEntryButton.Location = new System.Drawing.Point(71, 139);
-            this.clearEntryButton.Name = "clearEntryButton";
-            this.clearEntryButton.Size = new System.Drawing.Size(53, 40);
-            this.clearEntryButton.TabIndex = 0;
-            this.clearEntryButton.Text = "CE";
-            this.clearEntryButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // clearButton
             // 
             this.clearButton.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearButton.Location = new System.Drawing.Point(130, 139);
+            this.clearButton.Location = new System.Drawing.Point(12, 139);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(53, 40);
             this.clearButton.TabIndex = 0;
             this.clearButton.Text = "C";
             this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // percentButton
             // 
@@ -243,16 +249,18 @@
             this.percentButton.TabIndex = 0;
             this.percentButton.Text = "%";
             this.percentButton.UseVisualStyleBackColor = true;
+            this.percentButton.Click += new System.EventHandler(this.percentButton_Click);
             // 
             // rootButton
             // 
             this.rootButton.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rootButton.Location = new System.Drawing.Point(248, 139);
+            this.rootButton.Location = new System.Drawing.Point(130, 139);
             this.rootButton.Name = "rootButton";
             this.rootButton.Size = new System.Drawing.Size(53, 40);
             this.rootButton.TabIndex = 0;
             this.rootButton.Text = "√";
             this.rootButton.UseVisualStyleBackColor = true;
+            this.rootButton.Click += new System.EventHandler(this.generalButton_click);
             // 
             // denominatorButton
             // 
@@ -263,6 +271,7 @@
             this.denominatorButton.TabIndex = 0;
             this.denominatorButton.Text = "1/x";
             this.denominatorButton.UseVisualStyleBackColor = true;
+            this.denominatorButton.Click += new System.EventHandler(this.denominatorButton_Click);
             // 
             // equalsButton
             // 
@@ -273,21 +282,22 @@
             this.equalsButton.TabIndex = 0;
             this.equalsButton.Text = "=";
             this.equalsButton.UseVisualStyleBackColor = true;
+            this.equalsButton.Click += new System.EventHandler(this.equalsButton_Click);
             // 
             // PIButton
             // 
             this.PIButton.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PIButton.Location = new System.Drawing.Point(189, 139);
+            this.PIButton.Location = new System.Drawing.Point(71, 139);
             this.PIButton.Name = "PIButton";
             this.PIButton.Size = new System.Drawing.Size(53, 40);
             this.PIButton.TabIndex = 0;
             this.PIButton.Text = "π";
             this.PIButton.UseVisualStyleBackColor = true;
+            this.PIButton.Click += new System.EventHandler(this.PIButton_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(11, 15);
+            this.textBox1.Location = new System.Drawing.Point(10, 15);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(290, 118);
@@ -318,7 +328,6 @@
             this.Controls.Add(this.divisionButton);
             this.Controls.Add(this.PIButton);
             this.Controls.Add(this.nineButton);
-            this.Controls.Add(this.clearEntryButton);
             this.Controls.Add(this.fourButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.eightButton);
@@ -351,14 +360,13 @@
         private System.Windows.Forms.Button plusButton;
         private System.Windows.Forms.Button minusButton;
         private System.Windows.Forms.Button deleteButton;
-        private System.Windows.Forms.Button clearEntryButton;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button percentButton;
         private System.Windows.Forms.Button rootButton;
         private System.Windows.Forms.Button denominatorButton;
         private System.Windows.Forms.Button equalsButton;
         private System.Windows.Forms.Button PIButton;
-        private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }
 

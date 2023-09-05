@@ -23,6 +23,7 @@ namespace simple_calc.Model
             OperandA = 0;
             OperandB = 0;
             Operator = null;
+            IsBinary = true;
         }
         public void ClearFields()
         {
@@ -65,22 +66,25 @@ namespace simple_calc.Model
                 {
                     for(int j=0; j< operations.Length; j++)
                     {
-                        if (expression[i] == operations[j]) break;
-                        sb.Append(expression[i].ToString());
+                        if (expression[i] == operations[j])
+                        {
+                            OperandA = Convert.ToDouble(sb.ToString());
+                            return OperandA;
+                        }
                     }
+                    sb.Append(expression[i].ToString());
                 }
             }
-            OperandA = Convert.ToDouble(sb.ToString());
-            return OperandA;
+            throw new Exception("Check Expressions.cs double GetFrstNum.");
         }
 
 
         double GetScndNum(string expression)
         {
             StringBuilder sb = new StringBuilder();
-            int start_point = -1;
+            int start_point = 0;
 
-            for (int i = 0; i < expression.Length; start_point++)
+            for (int i = 0; i < expression.Length; i++)
             {
                 start_point++;
                 if (expression[i] == Operator[0]) break;
